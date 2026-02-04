@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <title>Áo Dài Việt Nam – Xưa & Nay</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta charset="UTF-8">
+<title>Áo Dài Việt Nam – Xưa & Nay</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{
@@ -12,277 +11,196 @@ body{
     background:#f4f6f8;
     color:#222;
     line-height:1.7;
-    transition:0.3s;
-}
-.dark{
-    background:#1e1e1e;
-    color:#eee;
-}
+    transition:0.3s; }
+body.dark{background:#1e1e1e;color:#eee}
 header{
-    background:#8b0000;
+    background:linear-gradient(135deg,#8b0000,#b22222);
     color:#fff;
     text-align:center;
-    padding:50px 20px;
-}
+    padding:60px 20px; }
 nav{
     background:#b22222;
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
     position:sticky;
-    top:0;
-    z-index:1000;
-}
+    top:0; }
 nav a{
     color:white;
     text-decoration:none;
     padding:15px 20px;
-    font-weight:bold;
-}
+    font-weight:bold; }
 nav a:hover{background:#8b0000}
-.container{
-    max-width:1100px;
-    margin:auto;
-    padding:40px 20px;
-}
+.container{max-width:1100px;margin:auto;padding:40px 20px}
 section{margin-bottom:80px}
 h2{
     margin-bottom:20px;
     padding-left:12px;
     border-left:6px solid #8b0000;
-    color:#8b0000;
-}
-#category h2{
-    color:#0066cc;
-    border-left-color:#0066cc;
-}
+    color:#8b0000; }
 .grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:25px;
-}
+    gap:25px; }
 .card{
     background:#fff;
     padding:25px;
+    border-radius:14px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.15); }
+body.dark .card{background:#2b2b2b}
+.card-img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
     border-radius:12px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.15);
-    transition:0.3s;
-}
-.dark .card{background:#2b2b2b}
-.card:hover{transform:translateY(-5px)}
-.card h3{color:#003366;margin-bottom:10px}
+    margin:15px 0; }
+.vote-img{
+    width:100%;
+    max-width:500px;
+    height:300px;
+    object-fit:cover;
+    border-radius:14px;
+    margin:20px auto;
+    display:none; }
 button{
     padding:10px 18px;
     border:none;
     background:#0066cc;
     color:white;
-    border-radius:6px;
+    border-radius:8px;
     cursor:pointer;
-    font-weight:bold;
-}
+    font-weight:bold; }
 button:hover{background:#004c99}
-.search-box{text-align:center;margin-bottom:20px}
-.search-box input{
-    padding:10px;
-    width:60%;
-    max-width:400px;
-    border-radius:6px;
-    border:1px solid #999;
-}
-form{
-    background:#fff;
-    padding:25px;
-    border-radius:12px;
-    max-width:450px;
-    margin:auto;
-    box-shadow:0 4px 12px rgba(0,0,0,0.2);
-}
-.dark form{background:#2b2b2b}
-form input,form textarea{
-    width:100%;
-    padding:10px;
-    margin-bottom:15px;
-}
-.toggle-text{
-    text-align:center;
-    font-size:14px;
-}
-.toggle-text span{
-    color:#0066cc;
-    cursor:pointer;
-    font-weight:bold;
-}
+.quiz label{display:block;margin:6px 0;cursor:pointer}
 footer{
     background:#333;
     color:white;
     text-align:center;
-    padding:25px;
-}
-#topBtn{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    display:none;
-}
+    padding:25px; }
 </style>
 </head>
-
 <body>
-
 <header>
 <h1>ÁO DÀI VIỆT NAM</h1>
 <p>Truyền thống – Hiện đại – Bản sắc dân tộc</p>
 <button onclick="toggleDark()">🌙 Dark Mode</button>
 </header>
-
 <nav>
 <a href="#home">Trang chủ</a>
 <a href="#category">Danh mục</a>
-<a href="#search">Tìm kiếm</a>
-<a href="#login">Đăng nhập</a>
-<a href="#blog">Tin tức</a>
+<a href="#vote">Bình chọn</a>
+<a href="#quiz">Câu hỏi</a>
 <a href="#contact">Liên hệ</a>
 </nav>
-
 <div class="container">
-
 <section id="home">
 <h2>Giới thiệu</h2>
 <p>
-Áo dài là trang phục truyền thống mang đậm bản sắc văn hóa Việt Nam,
-thể hiện vẻ đẹp dịu dàng, kín đáo và thanh lịch của người phụ nữ Việt.
+Áo dài là trang phục truyền thống tiêu biểu của Việt Nam, gắn liền với lịch sử,
+văn hóa và vẻ đẹp của con người Việt Nam qua nhiều thế hệ.
 </p>
 </section>
-
 <section id="category">
 <h2>Danh mục nội dung</h2>
-
-<div style="text-align:center;margin-bottom:20px">
-<button onclick="filterCategory('all')">Tất cả</button>
-<button onclick="filterCategory('xua')">Áo dài xưa</button>
-<button onclick="filterCategory('nay')">Áo dài nay</button>
-<button onclick="filterCategory('vanhoa')">Giá trị văn hóa</button>
-</div>
-
 <div class="grid">
-<div class="card category-item xua">
+<div class="card">
 <h3>Áo dài xưa – Nét đẹp truyền thống</h3>
-<p>
-Áo dài xưa xuất hiện từ thế kỷ XVIII với kiểu dáng kín đáo, cổ đứng,
-tay dài và form rộng, thể hiện lễ nghi và chuẩn mực xã hội xưa.
-</p>
+<img src="https://thaituan.com/wp-content/uploads/2023/02/y-nghia-ao-dai-ngu-than.jpg" class="card-img">
+<ul>
+<li> <p>Áo dài xưa là biểu tượng của nếp sống và lễ nghi truyền thống Việt Nam. Từ thế kỷ XVIII, áo dài ngũ thân xuất hiện với thiết kế kín đáo, cổ đứng, tay dài, form rộng, thể hiện sự trang nghiêm và chuẩn mực của xã hội xưa.</p> </li>
+<li> <p>Chất liệu thường là lụa, gấm với màu sắc trầm, hoa văn tinh tế. Áo dài không chỉ là trang phục mà còn phản ánh địa vị, văn hóa và phong cách sống của người Việt qua từng thời kỳ.</p> </li>
+<li><strong>Ứng dụng:</strong> lễ nghi, triều đình, cưới hỏi truyền thống</li>
+</ul>
 </div>
-
-<div class="card category-item nay">
-<h3>Áo dài nay – Truyền thống & hiện đại</h3>
-<p>
-Áo dài ngày nay được cách tân về kiểu dáng, màu sắc và chất liệu,
-phù hợp với nhịp sống hiện đại nhưng vẫn giữ hồn dân tộc.
-</p>
+<div class="card">
+<h3>Áo dài nay – Giao thoa truyền thống & hiện đại</h3>
+<img src="https://special.vietnamplus.vn/wp-content/uploads/2021/03/2909aodai2-1601344550-91.jpg" class="card-img">
+<ul>
+<li> <p>Áo dài ngày nay được cách tân linh  hoạt để phù hợp với nhịp sống hiện đại. Kiểu dáng ôm sát hơn, đa dạng cổ áo, tay áo và độ dài tà. Chất liệu phong phú như voan, ren, lụa cao cấp giúp áo dài trở nên nhẹ nhàng, thời trang và tiện dụng</p> </li>
+<li> <p>Áo dài hiện đại xuất hiện trong lễ hội, trường học, sự kiện, trình diễn thời trang, góp phần đưa hình ảnh Việt Nam ra thế giới mà vẫn giữ được hồn cốt dân tộc. </p> </li>
+<li><strong>Ứng dụng:</strong> học đường, lễ hội, sự kiện, trình diễn thời trang</li>
+</ul>
 </div>
-
-<div class="card category-item vanhoa">
-<h3>Giá trị bền vững</h3>
-<p>
-Dù thay đổi theo thời gian, áo dài vẫn là biểu tượng văn hóa,
-niềm tự hào của người Việt Nam.
-</p>
+<div class="card">
+<h3>Giá trị bền vững của áo dài</h3>
+<img src="https://xuongmayninhhiep.com/wp-content/uploads/2022/12/lich-su-ao-dai-viet-nam-vi.jpg" class="card-img">
+<ul>
+<li> <p>Dù qua bao biến đổi, áo dài vẫn là biểu tượng văn hóa đặc trưng của Việt Nam. Áo dài xưa mang vẻ đẹp nền nã, áo dài nay thể hiện sự sáng tạo – cả hai cùng tôn vinh nét duyên dáng và bản sắc con người Việt. </p> </li>
+</ul>
 </div>
-</div>
-</section>
-
-<section id="search">
-<h2>Tìm kiếm</h2>
-<div class="search-box">
-<input type="text" id="searchInput" placeholder="Nhập từ khóa...">
-</div>
-<p id="searchResult" style="text-align:center"></p>
-</section>
-
-<section id="login">
-<h2>Đăng nhập / Đăng ký</h2>
-
-<form id="loginForm">
-<input placeholder="Tên đăng nhập">
-<input type="password" placeholder="Mật khẩu">
-<button type="button">Đăng nhập</button>
-<div class="toggle-text">
-Bạn chưa có tài khoản?
-<span onclick="showRegister()">Đăng ký</span>
-</div>
-</form>
-
-<form id="registerForm" style="display:none">
-<input placeholder="Tên đăng nhập">
-<input type="email" placeholder="Email">
-<input type="password" placeholder="Mật khẩu">
-<button type="button">Đăng ký</button>
-<div class="toggle-text">
-Đã có tài khoản?
-<span onclick="showLogin()">Đăng nhập</span>
-</div>
-</form>
-</section>
-
-<section id="blog">
-<h2>Tin tức</h2>
-<div class="grid">
-<div class="card">Áo dài trong học đường</div>
-<div class="card">Áo dài và lễ hội</div>
-<div class="card blog-more" style="display:none">Áo dài & du lịch</div>
-</div>
-<div style="text-align:center;margin-top:20px">
-<button onclick="showMoreBlog()">Xem thêm</button>
 </div>
 </section>
-
+<section id="vote">
+<h2>Bình chọn áo dài bạn yêu thích</h2>
+<div class="card" style="text-align:center">
+<button onclick="vote('xua')">👘 Áo dài xưa</button>
+<button onclick="vote('nay')">👗 Áo dài hiện nay</button>
+<img id="voteImage" class="vote-img">
+<p id="voteResult"></p>
+</div>
+</section>
+<section id="quiz">
+<h2>Câu hỏi tìm hiểu Áo dài</h2>
+<div class="card quiz">
+<p><strong>1. Áo dài ngũ thân xuất hiện vào thế kỷ nào?</strong></p>
+<label><input type="radio" name="q1" value="sai"> Thế kỷ XVI</label>
+<label><input type="radio" name="q1" value="dung"> Thế kỷ XVIII</label>
+<label><input type="radio" name="q1" value="sai"> Thế kỷ XX</label>
+<p id="g1"></p>
+<p><strong>2. Chất liệu truyền thống của áo dài là?</strong></p>
+<label><input type="radio" name="q2" value="sai"> Cotton</label>
+<label><input type="radio" name="q2" value="dung"> Lụa, gấm</label>
+<label><input type="radio" name="q2" value="sai"> Jean</label>
+<p id="g2"></p>
+<p><strong>3. Áo dài thể hiện vẻ đẹp nào?</strong></p>
+<label><input type="radio" name="q3" value="dung"> Dịu dàng, thanh lịch</label>
+<label><input type="radio" name="q3" value="sai"> Cá tính mạnh</label>
+<p id="g3"></p>
+<button onclick="submitQuiz()">Nộp bài</button>
+<p id="quizResult"></p>
+</div>
+</section>
 <section id="contact">
 <h2>Liên hệ</h2>
-<form>
-<input placeholder="Họ tên">
-<input placeholder="Email">
-<textarea rows="4" placeholder="Nội dung"></textarea>
-<button>Gửi</button>
-</form>
-</section>
-
+<div class="card">
+<p>📞 Số điện thoại: 0123 456 789</p>
+<p>📧 Email: aodai@vietnam.vn</p>
 </div>
-
+</section>
+</div>
 <footer>
 © 2026 Website Áo Dài Việt Nam
 </footer>
-
-<button id="topBtn" onclick="goTop()">⬆</button>
-
 <script>
-function filterCategory(type){
-document.querySelectorAll('.category-item').forEach(item=>{
-item.style.display=(type==='all'||item.classList.contains(type))?'block':'none';
-});
-}
-document.getElementById('searchInput').addEventListener('keyup',e=>{
-document.getElementById('searchResult').innerText=
-e.target.value?'Đang tìm: '+e.target.value:'';
-});
-function showMoreBlog(){
-document.querySelectorAll('.blog-more').forEach(b=>b.style.display='block');
-}
-function showRegister(){
-loginForm.style.display='none';
-registerForm.style.display='block';
-}
-function showLogin(){
-registerForm.style.display='none';
-loginForm.style.display='block';
-}
 function toggleDark(){
-document.body.classList.toggle('dark');
-}
-window.onscroll=()=>{
-topBtn.style.display=window.scrollY>300?'block':'none';
-}
-function goTop(){window.scrollTo({top:0,behavior:'smooth'})}
+document.body.classList.toggle('dark'); }
+function vote(type){
+let xua=Number(localStorage.getItem('xua')||0);
+let nay=Number(localStorage.getItem('nay')||0);
+let img=document.getElementById('voteImage');
+if(type==='xua'){
+xua++;localStorage.setItem('xua',xua);
+img.src="https://blogreview.com.vn/wp-content/uploads/2025/05/Bo-anh-ao-dai-xua5.jpg";
+}else{
+nay++;localStorage.setItem('nay',nay);
+img.src="https://special.vietnamplus.vn/wp-content/uploads/2021/03/2909aodai2-1601344550-91.jpg"; }
+img.style.display="block";
+document.getElementById('voteResult').innerText=
+`Áo dài xưa: ${xua} lượt | Áo dài nay: ${nay} lượt`; }
+function submitQuiz(){
+let score=0;
+let answers=[
+{name:"q1", explain:"Áo dài ngũ thân xuất hiện vào thế kỷ XVIII."},
+{name:"q2", explain:"Lụa và gấm là chất liệu truyền thống."},
+{name:"q3", explain:"Áo dài tôn vinh vẻ đẹp dịu dàng."} ];
+answers.forEach((q,i)=>{
+let checked=document.querySelector(`input[name=${q.name}]:checked`);
+if(checked && checked.value==="dung"){score++}
+else document.getElementById("g"+(i+1)).innerText="→ "+q.explain; });
+let count=Number(localStorage.getItem('quizCount')||0)+1;
+localStorage.setItem('quizCount',count);
+document.getElementById('quizResult').innerText=
+`Bạn đúng ${score}/3 câu. Bạn là người thứ ${count} đã làm bài.`; }
 </script>
-
 </body>
 </html>
