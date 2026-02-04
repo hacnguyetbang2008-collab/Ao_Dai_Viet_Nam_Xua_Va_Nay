@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <title>Áo Dài Việt Nam – Xưa & Nay</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{
@@ -11,49 +12,64 @@ body{
     background:#f4f6f8;
     color:#222;
     line-height:1.7;
-    transition:0.3s; }
+    transition:0.3s;
+}
 body.dark{background:#1e1e1e;color:#eee}
+
 header{
     background:linear-gradient(135deg,#8b0000,#b22222);
     color:#fff;
     text-align:center;
-    padding:60px 20px; }
+    padding:60px 20px;
+}
 nav{
     background:#b22222;
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
     position:sticky;
-    top:0; }
+    top:0;
+}
 nav a{
     color:white;
     text-decoration:none;
     padding:15px 20px;
-    font-weight:bold; }
+    font-weight:bold;
+}
 nav a:hover{background:#8b0000}
+
 .container{max-width:1100px;margin:auto;padding:40px 20px}
 section{margin-bottom:80px}
+
 h2{
     margin-bottom:20px;
     padding-left:12px;
     border-left:6px solid #8b0000;
-    color:#8b0000; }
+    color:#8b0000;
+}
+
 .grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:25px; }
+    gap:25px;
+}
+
 .card{
     background:#fff;
     padding:25px;
     border-radius:14px;
-    box-shadow:0 6px 18px rgba(0,0,0,0.15); }
+    box-shadow:0 6px 18px rgba(0,0,0,0.15);
+}
 body.dark .card{background:#2b2b2b}
+
 .card-img{
     width:100%;
     height:230px;
     object-fit:cover;
     border-radius:12px;
-    margin:15px 0; }
+    margin:15px 0;
+}
+
 .vote-img{
     width:100%;
     max-width:500px;
@@ -61,7 +77,9 @@ body.dark .card{background:#2b2b2b}
     object-fit:cover;
     border-radius:14px;
     margin:20px auto;
-    display:none; }
+    display:none;
+}
+
 button{
     padding:10px 18px;
     border:none;
@@ -69,22 +87,29 @@ button{
     color:white;
     border-radius:8px;
     cursor:pointer;
-    font-weight:bold; }
+    font-weight:bold;
+}
 button:hover{background:#004c99}
+
 .quiz label{display:block;margin:6px 0;cursor:pointer}
+
 footer{
     background:#333;
     color:white;
     text-align:center;
-    padding:25px; }
+    padding:25px;
+}
 </style>
 </head>
+
 <body>
+
 <header>
 <h1>ÁO DÀI VIỆT NAM</h1>
 <p>Truyền thống – Hiện đại – Bản sắc dân tộc</p>
 <button onclick="toggleDark()">🌙 Dark Mode</button>
 </header>
+
 <nav>
 <a href="#home">Trang chủ</a>
 <a href="#category">Danh mục</a>
@@ -92,7 +117,9 @@ footer{
 <a href="#quiz">Câu hỏi</a>
 <a href="#contact">Liên hệ</a>
 </nav>
+
 <div class="container">
+
 <section id="home">
 <h2>Giới thiệu</h2>
 <p>
@@ -100,9 +127,12 @@ footer{
 văn hóa và vẻ đẹp của con người Việt Nam qua nhiều thế hệ.
 </p>
 </section>
+
 <section id="category">
 <h2>Danh mục nội dung</h2>
+
 <div class="grid">
+
 <div class="card">
 <h3>Áo dài xưa – Nét đẹp truyền thống</h3>
 <img src="https://thaituan.com/wp-content/uploads/2023/02/y-nghia-ao-dai-ngu-than.jpg" class="card-img">
@@ -112,54 +142,66 @@ văn hóa và vẻ đẹp của con người Việt Nam qua nhiều thế hệ.
 <li><strong>Ứng dụng:</strong> lễ nghi, triều đình, cưới hỏi truyền thống</li>
 </ul>
 </div>
+
 <div class="card">
 <h3>Áo dài nay – Giao thoa truyền thống & hiện đại</h3>
 <img src="https://special.vietnamplus.vn/wp-content/uploads/2021/03/2909aodai2-1601344550-91.jpg" class="card-img">
 <ul>
-<li> <p>Áo dài ngày nay được cách tân linh  hoạt để phù hợp với nhịp sống hiện đại. Kiểu dáng ôm sát hơn, đa dạng cổ áo, tay áo và độ dài tà. Chất liệu phong phú như voan, ren, lụa cao cấp giúp áo dài trở nên nhẹ nhàng, thời trang và tiện dụng</p> </li>
-<li> <p>Áo dài hiện đại xuất hiện trong lễ hội, trường học, sự kiện, trình diễn thời trang, góp phần đưa hình ảnh Việt Nam ra thế giới mà vẫn giữ được hồn cốt dân tộc. </p> </li>
+<li> <p>Áo dài ngày nay được cách tân linh  hoạt để phù hợp với nhịp sống hiện đại. Kiểu dáng ôm sát hơn, đa dạng cổ áo, tay áo và độ dài tà. Chất liệu phong phú như voan, ren, lụa cao cấp giúp áo dài trở nên nhẹ nhàng, thời trang và tiện dụng.</p> </li>
+<li> <p>Áo dài hiện đại xuất hiện trong lễ hội, trường học, sự kiện, trình diễn thời trang, góp phần đưa hình ảnh Việt Nam ra thế giới mà vẫn giữ được hồn cốt dân tộc.</p> </li>
 <li><strong>Ứng dụng:</strong> học đường, lễ hội, sự kiện, trình diễn thời trang</li>
 </ul>
 </div>
+
 <div class="card">
 <h3>Giá trị bền vững của áo dài</h3>
 <img src="https://xuongmayninhhiep.com/wp-content/uploads/2022/12/lich-su-ao-dai-viet-nam-vi.jpg" class="card-img">
 <ul>
-<li> <p>Dù qua bao biến đổi, áo dài vẫn là biểu tượng văn hóa đặc trưng của Việt Nam. Áo dài xưa mang vẻ đẹp nền nã, áo dài nay thể hiện sự sáng tạo – cả hai cùng tôn vinh nét duyên dáng và bản sắc con người Việt. </p> </li>
+<li> <p>Dù qua bao biến đổi, áo dài vẫn là biểu tượng văn hóa đặc trưng của Việt Nam. Áo dài xưa mang vẻ đẹp nền nã, áo dài nay thể hiện sự sáng tạo – cả hai cùng tôn vinh nét duyên dáng và bản sắc con người Việt.</p> </li>
 </ul>
 </div>
+
 </div>
 </section>
+
 <section id="vote">
 <h2>Bình chọn áo dài bạn yêu thích</h2>
 <div class="card" style="text-align:center">
 <button onclick="vote('xua')">👘 Áo dài xưa</button>
 <button onclick="vote('nay')">👗 Áo dài hiện nay</button>
+
 <img id="voteImage" class="vote-img">
 <p id="voteResult"></p>
 </div>
 </section>
+
 <section id="quiz">
 <h2>Câu hỏi tìm hiểu Áo dài</h2>
 <div class="card quiz">
+
 <p><strong>1. Áo dài ngũ thân xuất hiện vào thế kỷ nào?</strong></p>
 <label><input type="radio" name="q1" value="sai"> Thế kỷ XVI</label>
 <label><input type="radio" name="q1" value="dung"> Thế kỷ XVIII</label>
 <label><input type="radio" name="q1" value="sai"> Thế kỷ XX</label>
 <p id="g1"></p>
+
 <p><strong>2. Chất liệu truyền thống của áo dài là?</strong></p>
 <label><input type="radio" name="q2" value="sai"> Cotton</label>
 <label><input type="radio" name="q2" value="dung"> Lụa, gấm</label>
 <label><input type="radio" name="q2" value="sai"> Jean</label>
 <p id="g2"></p>
+
 <p><strong>3. Áo dài thể hiện vẻ đẹp nào?</strong></p>
 <label><input type="radio" name="q3" value="dung"> Dịu dàng, thanh lịch</label>
 <label><input type="radio" name="q3" value="sai"> Cá tính mạnh</label>
 <p id="g3"></p>
+
 <button onclick="submitQuiz()">Nộp bài</button>
 <p id="quizResult"></p>
+
 </div>
 </section>
+
 <section id="contact">
 <h2>Liên hệ</h2>
 <div class="card">
@@ -167,40 +209,56 @@ văn hóa và vẻ đẹp của con người Việt Nam qua nhiều thế hệ.
 <p>📧 Email: aodai@vietnam.vn</p>
 </div>
 </section>
+
 </div>
+
 <footer>
 © 2026 Website Áo Dài Việt Nam
 </footer>
+
 <script>
 function toggleDark(){
-document.body.classList.toggle('dark'); }
+document.body.classList.toggle('dark');
+}
+
 function vote(type){
 let xua=Number(localStorage.getItem('xua')||0);
 let nay=Number(localStorage.getItem('nay')||0);
 let img=document.getElementById('voteImage');
+
 if(type==='xua'){
 xua++;localStorage.setItem('xua',xua);
 img.src="https://blogreview.com.vn/wp-content/uploads/2025/05/Bo-anh-ao-dai-xua5.jpg";
 }else{
 nay++;localStorage.setItem('nay',nay);
-img.src="https://special.vietnamplus.vn/wp-content/uploads/2021/03/2909aodai2-1601344550-91.jpg"; }
+img.src="https://special.vietnamplus.vn/wp-content/uploads/2021/03/2909aodai2-1601344550-91.jpg";
+}
 img.style.display="block";
 document.getElementById('voteResult').innerText=
-`Áo dài xưa: ${xua} lượt | Áo dài nay: ${nay} lượt`; }
+`Áo dài xưa: ${xua} lượt | Áo dài nay: ${nay} lượt`;
+}
+
 function submitQuiz(){
 let score=0;
 let answers=[
 {name:"q1", explain:"Áo dài ngũ thân xuất hiện vào thế kỷ XVIII."},
 {name:"q2", explain:"Lụa và gấm là chất liệu truyền thống."},
-{name:"q3", explain:"Áo dài tôn vinh vẻ đẹp dịu dàng."} ];
+{name:"q3", explain:"Áo dài tôn vinh vẻ đẹp dịu dàng."}
+];
+
 answers.forEach((q,i)=>{
 let checked=document.querySelector(`input[name=${q.name}]:checked`);
 if(checked && checked.value==="dung"){score++}
-else document.getElementById("g"+(i+1)).innerText="→ "+q.explain; });
+else document.getElementById("g"+(i+1)).innerText="→ "+q.explain;
+});
+
 let count=Number(localStorage.getItem('quizCount')||0)+1;
 localStorage.setItem('quizCount',count);
+
 document.getElementById('quizResult').innerText=
-`Bạn đúng ${score}/3 câu. Bạn là người thứ ${count} đã làm bài.`; }
+`Bạn đúng ${score}/3 câu. Bạn là người thứ ${count} đã làm bài.`;
+}
 </script>
+
 </body>
 </html>
